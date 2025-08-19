@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/tablas', async(req,res)=>{
     try {
-        let [resultadoTablas] = await db.query('SHOE TABLES');
+        let [resultadoTablas] = await db.query('SHOW TABLES');
         res.json(resultadoTablas);
         
     } catch (error) {
